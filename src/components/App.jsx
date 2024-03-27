@@ -11,6 +11,7 @@ const App = () => {
 
   const [characters, setCharacters]= useState([]);
   const [namefilter, setNamefilter]= useState('');
+  const [specieFilter, setSpecieFilter]= useState();
 
   useEffect(() => {
     characterInfo().then((dataCharacter)=> {
@@ -22,8 +23,15 @@ const App = () => {
     setNamefilter(value);
   };
 
+  const handleChangeSpecies = (value) => {
+    setSpecieFilter(value);
+  }
+
   const filteredCharacters = characters.filter((character)=> {
    return character.name.toLowerCase().includes(namefilter.toLowerCase());
+  })
+  .filter((character) => {
+    return specieFilter ? specieFilter === character.species : true;
   });
 
 
@@ -34,7 +42,7 @@ const App = () => {
       <img src={Logo} alt={Logo}/>
       </header>
       <main>
-        <Filters onChangeName={handleChangeName} namefilter={namefilter}/>
+        <Filters onChangeName={handleChangeName} namefilter={namefilter} onChangeSpecies={handleChangeSpecies} specieFilter={specieFilter}/>
         <CharacterList characters={filteredCharacters}/>
         
       </main>
