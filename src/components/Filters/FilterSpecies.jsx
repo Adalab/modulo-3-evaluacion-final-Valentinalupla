@@ -3,6 +3,7 @@
 function FilterSpecies({onChangeSpecies, specieValue}) {
 
     const handleChange = (ev) => {
+        
         onChangeSpecies(ev.target.value);
     }
 

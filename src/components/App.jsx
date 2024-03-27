@@ -1,10 +1,11 @@
-// import { Link, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from 'react';
+import { Route, Routes, useLocation, matchPath} from "react-router-dom";
 import '../scss/App.scss';
 import characterInfo from "../services/characterInfo";
 import CharacterList from "./CharacterList";
 import Logo from "../images/logo.png";
 import Filters from './Filters/Filters';
+import CharacterDetail from "./CharacterDetail";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
   }, [])
 
   const handleChangeName = (value) => {
+    
     setNamefilter(value);
   };
 
@@ -34,17 +36,39 @@ const App = () => {
     return specieFilter ? specieFilter === character.species : true;
   });
 
+  const { pathname } = useLocation();
+  const characterDetailRoute = matchPath("/detailCharacter/:idCharacter", pathname);
+  const idCharacter = characterDetailRoute ? characterDetailRoute.params.idCharacter : null;
+  const characterDetailData = characters.find((character) => character.id === idCharacter);
+  console.log(characterDetailData);
 
   return (
     <div>
       <header>
-      <h1>Rick and Morty</h1>
       <img src={Logo} alt={Logo}/>
       </header>
       <main>
-        <Filters onChangeName={handleChangeName} namefilter={namefilter} onChangeSpecies={handleChangeSpecies} specieFilter={specieFilter}/>
-        <CharacterList characters={filteredCharacters}/>
-        
+        <Routes>
+          <Route  
+          patch="/" 
+          element={
+            <>
+            <Filters 
+            onChangeName={handleChangeName} 
+            namefilter={namefilter} 
+            onChangeSpecies={handleChangeSpecies}specieFilter={specieFilter}/>
+            <CharacterList 
+            characters={filteredCharacters}/>
+          
+            </>
+          }/>
+          <Route 
+          path="/detailCharacter/:idCharacter" 
+          element={<CharacterDetail  Character={characterDetailData} />}/> 
+        </Routes>
+
+
+       
       </main>
     </div>
   );
