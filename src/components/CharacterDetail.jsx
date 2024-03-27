@@ -1,14 +1,15 @@
 
 
-function CharacterDetail( {Character}) {
+function CharacterDetail( {character}) {
   return (
     <div>
-       <img  src={Character.image} />
-      <h4>{Character.name}</h4>
-      <span>{Character.species}</span>
-      <h5>{Character.origin.name}</h5>
-      <h5>{Character.episode}</h5>
-      <span>{Character.status}</span>
+       <img  src={character.image} />
+      <h4>{character.name}</h4>
+      <span>{character.species}</span>
+      <h5>{character.origin}</h5>
+      <h5>{character.episode.length}</h5> 
+      <span>{character.status}</span>
+      <span>{character.gender}</span>
     </div>
   )
 }

@@ -36,11 +36,12 @@ const App = () => {
     return specieFilter ? specieFilter === character.species : true;
   });
 
+  // id de la ruta character
   const { pathname } = useLocation();
   const characterDetailRoute = matchPath("/detailCharacter/:idCharacter", pathname);
-  const idCharacter = characterDetailRoute ? characterDetailRoute.params.idCharacter : null;
+  const idCharacter = characterDetailRoute ? parseInt(characterDetailRoute.params.idCharacter) : null;
   const characterDetailData = characters.find((character) => character.id === idCharacter);
-  console.log(characterDetailData);
+  
 
   return (
     <div>
@@ -50,13 +51,15 @@ const App = () => {
       <main>
         <Routes>
           <Route  
-          patch="/" 
+          path="/" 
+          
           element={
             <>
             <Filters 
             onChangeName={handleChangeName} 
             namefilter={namefilter} 
-            onChangeSpecies={handleChangeSpecies}specieFilter={specieFilter}/>
+            onChangeSpecies={handleChangeSpecies}
+            specieFilter={specieFilter}/>
             <CharacterList 
             characters={filteredCharacters}/>
           
@@ -64,7 +67,7 @@ const App = () => {
           }/>
           <Route 
           path="/detailCharacter/:idCharacter" 
-          element={<CharacterDetail  Character={characterDetailData} />}/> 
+          element={<CharacterDetail  character={characterDetailData}  />}/> 
         </Routes>
 
 
