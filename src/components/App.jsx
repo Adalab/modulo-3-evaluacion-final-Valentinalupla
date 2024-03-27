@@ -3,9 +3,17 @@ import '../scss/App.scss'
 
 
 
+
 const App = () => {
   return (
- <h1>hola</h1>
+    <div>
+      <header>
+
+      </header>
+      <main>
+        
+      </main>
+    </div>
   );
 };
 
