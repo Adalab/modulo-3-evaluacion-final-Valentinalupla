@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Route, Routes, useLocation, matchPath} from "react-router-dom";
+import { Route, Routes, useLocation, matchPath, Link} from "react-router-dom";
 import '../scss/App.scss';
 import characterInfo from "../services/characterInfo";
 import CharacterList from "./CharacterList";
