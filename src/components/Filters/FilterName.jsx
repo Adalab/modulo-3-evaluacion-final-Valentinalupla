@@ -1,4 +1,4 @@
-
+import '../../scss/components/FilterName.scss';
 function FilterName({onChangeName, namefilter}) {
 
     const handleChange = (ev) => {
@@ -12,16 +12,16 @@ function FilterName({onChangeName, namefilter}) {
     };
     }
   return (
-   <>
-    <label htmlFor="name"></label>
+   <div className="filterName">
+    <label htmlFor="name">Busca aquí tu personaje favorito</label>
     <input 
     type="text" 
     id="name" 
     onChange={handleChange} 
     onKeyDown={handleKeyDown}
     value={namefilter}/>
-    </>
+    </div>
   )
 }
 
-export default FilterName
+export default FilterName;

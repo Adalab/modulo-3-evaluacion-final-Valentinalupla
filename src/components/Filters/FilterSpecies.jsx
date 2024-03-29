@@ -1,4 +1,4 @@
-
+import '../../scss/components/FilterSpecies.scss';
 
 function FilterSpecies({onChangeSpecies, specieValue}) {
 
@@ -8,9 +8,10 @@ function FilterSpecies({onChangeSpecies, specieValue}) {
     }
 
   return (
-    <div>
+    <div className="speciesFilter">
         <label>Especie</label>
-        <label htmlFor="Human">Humano</label>
+        <div className='humanAlien'>
+        <label htmlFor="Human">Human</label>
         <input type="radio" 
         value="Human" 
         id="Human" 
@@ -25,6 +26,7 @@ function FilterSpecies({onChangeSpecies, specieValue}) {
         name="species" 
         onChange={handleChange}
         checked= {specieValue === "Alien"}/>
+        </div>
         
     </div>
   )

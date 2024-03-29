@@ -44,8 +44,8 @@ const App = () => {
   
 
   return (
-    <div>
-      <header>
+    <div className='containerApp'>
+      <header className='logo'>
       <img src={Logo} alt={Logo}/>
       </header>
       <main>
