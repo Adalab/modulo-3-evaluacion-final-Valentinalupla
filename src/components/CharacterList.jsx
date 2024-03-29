@@ -3,7 +3,7 @@ import '../scss/components/CharacterList.scss';
 
 function CharacterList({characters}) {
   return (
-    <section className="sectionCharacterList">
+    <section className="containerList">
       <ul>
       {characters.map((character) => {
           return <CharacterCard key={character.id} characterData={character}/>;

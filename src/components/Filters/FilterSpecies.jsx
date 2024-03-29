@@ -9,7 +9,7 @@ function FilterSpecies({onChangeSpecies, specieValue}) {
 
   return (
     <div className="speciesFilter">
-        <label>Especie</label>
+        <label>Busca por especie</label>
         <div className='humanAlien'>
         <label htmlFor="Human">Human</label>
         <input type="radio" 
