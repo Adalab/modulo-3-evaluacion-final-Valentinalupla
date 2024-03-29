@@ -1,7 +1,7 @@
 import CharacterCard from "./CharacterCard"
 import '../scss/components/CharacterList.scss';
 
-function CharacterList({characters}) {
+function CharacterList({characters, namefilter}) {
   return (
     <section className="containerList">
       <ul>
@@ -9,6 +9,7 @@ function CharacterList({characters}) {
           return <CharacterCard key={character.id} characterData={character}/>;
         })}
         </ul>
+        
     </section>
   );
 }

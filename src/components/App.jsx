@@ -61,7 +61,8 @@ const App = () => {
             onChangeSpecies={handleChangeSpecies}
             specieFilter={specieFilter}/>
             <CharacterList 
-            characters={filteredCharacters}/>
+            characters={filteredCharacters}
+            nameFilter={namefilter}/>
           
             </>
           }/>
