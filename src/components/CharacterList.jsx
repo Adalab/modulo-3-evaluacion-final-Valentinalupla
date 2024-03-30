@@ -1,11 +1,15 @@
 import CharacterCard from "./CharacterCard"
 import '../scss/components/CharacterList.scss';
 
-function CharacterList({characters, namefilter}) {
+function CharacterList({characters}) {
   return (
-    <section className="containerList">
-      <ul>
-      {characters.map((character) => {
+    <section>
+      <ul className="containerList">
+      {characters
+      .sort((name, compareName) =>  { 
+        return name.name.localeCompare(compareName.name)
+      })
+      .map((character) => {
           return <CharacterCard key={character.id} characterData={character}/>;
         })}
         </ul>

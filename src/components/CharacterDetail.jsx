@@ -15,9 +15,9 @@ function CharacterDetail( {character}) {
       <h4> Name: {character.name}</h4>
       <span> Specie: {character.species}</span>
       <h5> Origin: {character.origin}</h5>
+      <span>Gender: {character.gender}</span>
       <span>Episodes: {character.episode.length}</span> 
       <span>Status: {character.status}</span>
-      <span>Gender: {character.gender}</span>
       <div>
       
       </div>

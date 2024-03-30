@@ -5,7 +5,7 @@ function CharacterCard({ characterData }) {
   return (
     <li className="liCard">
       <Link  className="liCard" to={`/detailCharacter/${characterData.id}`}>
-      <img src={characterData.image} alt={characterData.name} />
+      <img className="img" src={characterData.image} alt={characterData.name} />
       <h4>{characterData.name}</h4>
       <span>{characterData.species}</span>
       </Link>

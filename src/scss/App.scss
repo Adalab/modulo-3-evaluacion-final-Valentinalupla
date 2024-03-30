@@ -1,21 +1,5 @@
 @import 'core/reset';
 
 .containerApp {
-    background-color: black;
-    
-    .logo {
-      img {
-        height: 50vh;
-        justify-content: center;
-      }
-     .title {
-        color: white;
-     }
-    }
-}
-
-.speciesFilter {
-    label {
-        color: white;
-    }
+   background-color: rgb(23, 22, 22);
 }

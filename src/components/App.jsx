@@ -3,7 +3,7 @@ import { Route, Routes, useLocation, matchPath, Link} from "react-router-dom";
 import '../scss/App.scss';
 import characterInfo from "../services/characterInfo";
 import CharacterList from "./CharacterList";
-import Logo from "../images/logo.png";
+import Header from './Header';
 import Filters from './Filters/Filters';
 import CharacterDetail from "./CharacterDetail";
 
@@ -45,9 +45,7 @@ const App = () => {
 
   return (
     <div className='containerApp'>
-      <header className='logo'>
-      <img src={Logo} alt={Logo}/>
-      </header>
+      <Header />
       <main>
         <Routes>
           <Route  

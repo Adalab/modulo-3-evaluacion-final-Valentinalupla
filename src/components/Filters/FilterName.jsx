@@ -13,7 +13,7 @@ function FilterName({onChangeName, namefilter}) {
     }
   return (
    <div className="filterName">
-    <label htmlFor="name">Busca aquí tu personaje favorito</label>
+    <label htmlFor="name">BUSCA AQUI TU PERSONAJE FAVORITO</label>
     <input 
     type="text" 
     id="name" 
