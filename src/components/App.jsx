@@ -12,7 +12,8 @@ const App = () => {
 
   const [characters, setCharacters]= useState([]);
   const [namefilter, setNamefilter]= useState('');
-  const [specieFilter, setSpecieFilter]= useState();
+  const [specieFilter, setSpecieFilter]= useState('');
+  const [genderFilter, setGenderFilter]= useState('');
 
   useEffect(() => {
     characterInfo().then((dataCharacter)=> {
@@ -29,6 +30,12 @@ const App = () => {
     setSpecieFilter(value);
   }
 
+  const handleGender = (value) => {
+    setGenderFilter(value);
+  }
+
+  //filtro personajes 
+  
   const filteredCharacters = characters.filter((character)=> {
    return character.name.toLowerCase().includes(namefilter.toLowerCase());
   })
@@ -57,7 +64,10 @@ const App = () => {
             onChangeName={handleChangeName} 
             namefilter={namefilter} 
             onChangeSpecies={handleChangeSpecies}
-            specieFilter={specieFilter}/>
+            specieFilter={specieFilter}
+            onChangeGender={handleGender}
+            genderFilter={genderFilter}
+            />
             <CharacterList 
             characters={filteredCharacters}
             nameFilter={namefilter}/>

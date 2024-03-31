@@ -6,7 +6,7 @@ function CharacterDetail( {character}) {
     
     <div className="cardDetail"> 
     <div>
-    <Link className='buttonBack' to="/"> Atrás </Link>
+    <Link className='buttonBack' to="/"> Volver al inicio </Link>
     </div>
     
       <div className='pictureCharacter'>

@@ -1,17 +1,31 @@
 .liCard {
+  min-width: 320px;
     animation-duration: 2s;
   animation-name: slidein;
     text-align: center;
     text-decoration: none;
     list-style: none;
-    color: white;
-    font-family: fantasy;
+    
+
+   
     
     img {
         width: 200px;
         height: 200px;
         border: 15px solid #3ab54a;
         border-radius: 50%;
+    }
+
+    h4{
+      font-family: monospace;
+      font-weight: bolder;
+      color: white;
+      padding-top: 20px;
+    }
+    span {
+      color: #00ff15;
+      font-family: monospace;
+     
     }
 }
 

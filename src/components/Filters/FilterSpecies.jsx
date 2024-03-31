@@ -4,12 +4,12 @@ function FilterSpecies({onChangeSpecies, specieValue}) {
 
     const handleChange = (ev) => {
         
-        onChangeSpecies(ev.target.value);
+      onChangeSpecies(ev.target.value);
     }
 
   return (
     <div className="speciesFilter">
-        <label>Busca por especie</label>
+        <label>SPECIE 👨🏻 👽</label>
         <div className='humanAlien'>
         <label htmlFor="Human">Human</label>
         <input type="radio" 
