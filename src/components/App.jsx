@@ -41,6 +41,9 @@ const App = () => {
   })
   .filter((character) => {
     return specieFilter ? specieFilter === character.species : true;
+  })
+  .filter((character) => {
+    return genderFilter ? genderFilter === character.gender : true;
   });
 
   // id de la ruta character
