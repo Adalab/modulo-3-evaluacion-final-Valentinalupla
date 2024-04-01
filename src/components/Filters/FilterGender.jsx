@@ -13,7 +13,18 @@ function FilterGender({onChangeGender, genderValue}) {
    
     <div className="genderFilter">
         <div className='maleFemale'>
+          
         <label>GENDER   </label>
+        <label htmlFor="all">All</label>
+          <input
+            type="radio"
+            name="gender"
+            id="all"
+            value=""
+            onChange={handleChangeGender}
+            checked={genderValue === ""}/>
+          
+        
         <label htmlFor="Female"> 👩🏻 Female</label>
         <input type="radio" 
         value="Female" 

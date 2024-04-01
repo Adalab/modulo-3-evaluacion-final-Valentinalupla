@@ -12,6 +12,14 @@ function FilterSpecies({onChangeSpecies, specieValue}) {
     <div className="speciesFilter">
         <div className='humanAlien'>
         <label>SPECIE </label>
+        <label htmlFor="all">All</label>
+          <input
+            type="radio"
+            name="species"
+            id="all"
+            value=""
+            onChange={handleChange}
+            checked={specieValue === ""}/>
         <label htmlFor="Human">👨🏻 Human</label>
         <input type="radio" 
         value="Human" 
