@@ -10,9 +10,9 @@ function FilterSpecies({onChangeSpecies, specieValue}) {
 
   return (
     <div className="speciesFilter">
-        <label>SPECIE 👨🏻 👽</label>
         <div className='humanAlien'>
-        <label htmlFor="Human">Human</label>
+        <label>SPECIE </label>
+        <label htmlFor="Human">👨🏻 Human</label>
         <input type="radio" 
         value="Human" 
         id="Human" 
@@ -20,7 +20,7 @@ function FilterSpecies({onChangeSpecies, specieValue}) {
         onChange={handleChange}
         checked= {specieValue === "Human"}/>
 
-        <label htmlFor="Alien">Alien</label>
+        <label htmlFor="Alien">👽 Alien</label>
         <input type="radio" 
         value="Alien" 
         id="Alien" 
@@ -33,7 +33,7 @@ function FilterSpecies({onChangeSpecies, specieValue}) {
   )
 }
 
-FilterSpecies.PropTypes = {
+FilterSpecies.propTypes = {
   onChangeSpecies: PropTypes.func.isRequired,
   specieValue: PropTypes.string.isRequired,
 };

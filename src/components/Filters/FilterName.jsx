@@ -10,9 +10,9 @@ function FilterName({onChangeName, namefilter}) {
     const handleKeyDown = (ev) => {
     if  (ev.key === 'Enter') {
       ev.preventDefault();
-
-    };
     }
+    };
+
   return (
    <div className="filterName">
     <label htmlFor="name">🛸 SEARCH YOUR FAVORITE CHARACTER 🛸</label>
@@ -25,7 +25,7 @@ function FilterName({onChangeName, namefilter}) {
     </div>
   )
 }
-FilterName.PropTypes = {
+FilterName.propTypes = {
 
   onChangeName: PropTypes.func.isRequired,
   namefilter: PropTypes.string.isRequired

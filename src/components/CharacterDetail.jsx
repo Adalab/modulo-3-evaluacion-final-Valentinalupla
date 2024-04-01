@@ -26,9 +26,8 @@ function CharacterDetail( {character}) {
   )
 }
 
-CharacterDetail.PropTypes = {
-  characters: PropTypes.object.isRequired
-  
+CharacterDetail.propTypes = {
+  character: PropTypes.object
 };
 
 

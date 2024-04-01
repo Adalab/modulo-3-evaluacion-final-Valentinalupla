@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../../scss/components/FilterGender.scss';
 
 function FilterGender({onChangeGender, genderValue}) {
 
@@ -10,10 +11,10 @@ function FilterGender({onChangeGender, genderValue}) {
 
   return (
    
-    <div className="speciesFilter">
-        <label>GENDER 👩🏻  👨🏼 </label>
-        <div className='humanAlien'>
-        <label htmlFor="Female">Female</label>
+    <div className="genderFilter">
+        <div className='maleFemale'>
+        <label>GENDER   </label>
+        <label htmlFor="Female"> 👩🏻 Female</label>
         <input type="radio" 
         value="Female" 
         id="Female" 
@@ -21,7 +22,7 @@ function FilterGender({onChangeGender, genderValue}) {
         onChange={handleChangeGender}
         checked= {genderValue === "Female"}/>
 
-        <label htmlFor="Male">Male</label>
+        <label htmlFor="Male"> 👨🏼 Male</label>
         <input type="radio" 
         value="Male" 
         id="Male" 
@@ -35,7 +36,7 @@ function FilterGender({onChangeGender, genderValue}) {
   )
 
 }
-FilterGender.PropTypes = {
+FilterGender.propTypes = {
 
   onChangeGender: PropTypes.func.isRequired,
   genderValue: PropTypes.string.isRequired

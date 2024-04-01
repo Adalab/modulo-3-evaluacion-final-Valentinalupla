@@ -14,7 +14,7 @@ function Filters({onChangeName, namefilter, onChangeSpecies, specieFilter, onCha
     </form>
   )
 }
-Filters.PropTypes = {
+Filters.propTypes = {
   onChangeName: PropTypes.func.isRequired,
   onChangeSpecies: PropTypes.func.isRequired,
   onChangeGender: PropTypes.func.isRequired,

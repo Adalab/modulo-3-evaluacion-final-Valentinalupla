@@ -8,6 +8,7 @@ import Filters from './Filters/Filters';
 import CharacterDetail from "./CharacterDetail";
 
 
+
 const App = () => {
 
   const [characters, setCharacters]= useState([]);
@@ -90,6 +91,7 @@ const App = () => {
 
        
       </main>
+      
     </div>
   );
 };

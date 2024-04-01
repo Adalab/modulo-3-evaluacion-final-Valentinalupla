@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import '../scss/components/CharacterCard.scss';
 
+
 function CharacterCard({ characterData }) {
   return (
     
@@ -12,10 +13,11 @@ function CharacterCard({ characterData }) {
       <span>{characterData.species}</span>
       </Link>
     </li>
+   
   )
 }
 
-CharacterCard.PropTypes = {
+CharacterCard.propTypes = {
   characterData: PropTypes.object.isRequired
 };
 

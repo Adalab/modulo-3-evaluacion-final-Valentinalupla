@@ -19,7 +19,7 @@ function CharacterList({characters}) {
   );
 }
 
-CharacterList.PropTypes = {
+CharacterList.propTypes = {
   characters: PropTypes.array.isRequired
   
 };
