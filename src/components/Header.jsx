@@ -5,8 +5,8 @@ import '../scss/components/Header.scss';
 function Header() {
   return (
     <header className='logo'>
-<img src={Logo} alt={Logo}/>
-</header>
+       <img src={Logo} alt={Logo}/>
+    </header>
 
   )
 }

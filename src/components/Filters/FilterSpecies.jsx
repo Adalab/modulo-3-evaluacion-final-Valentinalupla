@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../../scss/components/FilterSpecies.scss';
 
 function FilterSpecies({onChangeSpecies, specieValue}) {
@@ -31,5 +32,10 @@ function FilterSpecies({onChangeSpecies, specieValue}) {
     </div>
   )
 }
+
+FilterSpecies.PropTypes = {
+  onChangeSpecies: PropTypes.func.isRequired,
+  specieValue: PropTypes.string.isRequired,
+};
 
 export default FilterSpecies

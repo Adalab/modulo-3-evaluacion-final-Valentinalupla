@@ -1,6 +1,7 @@
 import FilterGender from "./FilterGender";
 import FilterName from "./FilterName";
 import FilterSpecies from "./FilterSpecies";
+import PropTypes from 'prop-types';
 
 
 
@@ -13,5 +14,13 @@ function Filters({onChangeName, namefilter, onChangeSpecies, specieFilter, onCha
     </form>
   )
 }
-
+Filters.PropTypes = {
+  onChangeName: PropTypes.func.isRequired,
+  onChangeSpecies: PropTypes.func.isRequired,
+  onChangeGender: PropTypes.func.isRequired,
+  namefilter: PropTypes.string.isRequired,
+  specieFilter: PropTypes.string.isRequired,
+  genderFilter: PropTypes.string.isRequired
+  
+};
 export default Filters

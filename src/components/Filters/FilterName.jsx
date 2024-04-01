@@ -1,4 +1,6 @@
+import PropTypes from 'prop-types';
 import '../../scss/components/FilterName.scss';
+
 function FilterName({onChangeName, namefilter}) {
 
     const handleChange = (ev) => {
@@ -23,5 +25,11 @@ function FilterName({onChangeName, namefilter}) {
     </div>
   )
 }
+FilterName.PropTypes = {
+
+  onChangeName: PropTypes.func.isRequired,
+  namefilter: PropTypes.string.isRequired
+  
+};
 
 export default FilterName;

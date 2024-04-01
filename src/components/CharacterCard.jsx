@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 import '../scss/components/CharacterCard.scss';
 
 function CharacterCard({ characterData }) {
   return (
+    
     <li className="liCard">
       <Link  className="liCard" to={`/detailCharacter/${characterData.id}`}>
       <img className="img" src={characterData.image} alt={characterData.name} />
@@ -12,5 +14,9 @@ function CharacterCard({ characterData }) {
     </li>
   )
 }
+
+CharacterCard.PropTypes = {
+  characterData: PropTypes.object.isRequired
+};
 
 export default CharacterCard

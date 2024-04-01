@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 function FilterGender({onChangeGender, genderValue}) {
 
@@ -6,7 +6,7 @@ function FilterGender({onChangeGender, genderValue}) {
     const handleChangeGender = (ev) => {
       
         onChangeGender(ev.target.value);
-    }
+    };
 
   return (
    
@@ -33,6 +33,13 @@ function FilterGender({onChangeGender, genderValue}) {
     </div>
    
   )
+
 }
+FilterGender.PropTypes = {
+
+  onChangeGender: PropTypes.func.isRequired,
+  genderValue: PropTypes.string.isRequired
+  
+};
 
 export default FilterGender;

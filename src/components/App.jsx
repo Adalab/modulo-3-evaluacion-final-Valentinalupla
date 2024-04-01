@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Route, Routes, useLocation, matchPath, Link} from "react-router-dom";
+import { Route, Routes, useLocation, matchPath} from "react-router-dom";
 import '../scss/App.scss';
 import characterInfo from "../services/characterInfo";
 import CharacterList from "./CharacterList";
@@ -22,7 +22,6 @@ const App = () => {
   }, [])
 
   const handleChangeName = (value) => {
-    
     setNamefilter(value);
   };
 
@@ -37,7 +36,7 @@ const App = () => {
   //filtro personajes 
   
   const filteredCharacters = characters.filter((character)=> {
-   return character.name.toLowerCase().includes(namefilter.toLowerCase());
+    return character.name.toLowerCase().includes(namefilter.toLowerCase());
   })
   .filter((character) => {
     return specieFilter ? specieFilter === character.species : true;
@@ -46,12 +45,15 @@ const App = () => {
     return genderFilter ? genderFilter === character.gender : true;
   });
 
+
+
   // id de la ruta character
   const { pathname } = useLocation();
   const characterDetailRoute = matchPath("/detailCharacter/:idCharacter", pathname);
   const idCharacter = characterDetailRoute ? parseInt(characterDetailRoute.params.idCharacter) : null;
   const characterDetailData = characters.find((character) => character.id === idCharacter);
   
+
 
   return (
     <div className='containerApp'>
@@ -60,9 +62,8 @@ const App = () => {
         <Routes>
           <Route  
           path="/" 
-          
           element={
-            <>
+          <>
             <Filters 
             onChangeName={handleChangeName} 
             namefilter={namefilter} 
@@ -75,11 +76,15 @@ const App = () => {
             characters={filteredCharacters}
             nameFilter={namefilter}/>
           
-            </>
-          }/>
+          </>
+        }/>
+
           <Route 
           path="/detailCharacter/:idCharacter" 
-          element={<CharacterDetail  character={characterDetailData}  />}/> 
+          element={
+          <CharacterDetail  character={characterDetailData} />}
+          /> 
+
         </Routes>
 
 

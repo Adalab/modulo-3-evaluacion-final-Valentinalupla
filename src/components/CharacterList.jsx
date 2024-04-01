@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import CharacterCard from "./CharacterCard"
 import '../scss/components/CharacterList.scss';
 
@@ -18,4 +19,8 @@ function CharacterList({characters}) {
   );
 }
 
+CharacterList.PropTypes = {
+  characters: PropTypes.array.isRequired
+  
+};
 export default CharacterList;
