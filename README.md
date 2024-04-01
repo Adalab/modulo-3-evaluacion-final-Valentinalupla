@@ -2,7 +2,7 @@
 
 Este proyecto es una página web diseñada para los fanáticos de la famosa serie "Rick y Morty". La página permite a los usuarios buscar sus personajes favoritos utilizando filtros basados en especies y género.
 
-**WEB:**
+**WEB:** https://beta.adalab.es/modulo-3-evaluacion-final-Valentinalupla/
 
 ## Tecnologías usadas:
 
